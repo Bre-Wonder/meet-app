@@ -68,6 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # meet-app
 
 # Project Description
@@ -78,6 +79,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
   The app was built through the "create-react-app" in React in the CLI. The app is hosted through "gh-pages" in GitHub. 
 
+  ## Using Serverless Functions with Meet App
+    This Meet App uses AWS Lambda cloud services to run its serverless function. The serverless function allows the application to scale up or down depending on the traffic. The server only responds when an event is triggered by the user, in this case when a user selects a city or wants to see details or lists of events. AWS Lambda handles the allocation of resources such as compute and memory as its excuting the serverless function in response to its needs.
+
 # List of Project Dependancies
   
   * React 18.2.0
@@ -85,8 +89,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   * gh-pages 6.0.0
 
 
+# User Stories
 
-Format for User Stories:
+  Format for User Stories:
   As a [role],
   I should be able to [action],
   So that [benefit]
@@ -94,8 +99,6 @@ Format for User Stories:
   Given: ***
   When: ***
   Then: ***
-
-# User Stories
 
 ## Feature 1: Filter Events By City
   As a user,
