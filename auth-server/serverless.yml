@@ -16,3 +16,9 @@ functions:
       - http:
           path: api/get-auth-url #<your api path>
           method: get #<get, post, put, or delete>
+  getAccessToken:
+    handler: handler.getAccessToken
+    events:
+      - http:
+          path: api/token/{code}
+          method: get
