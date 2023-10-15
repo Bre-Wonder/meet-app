@@ -30,7 +30,7 @@
         const resultLink = document.getElementById("authURL");
         const getAuthURL = "https://4de84okria.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url";
 
-        getAutUrlButton.onclick = function () {
+        getAuthUrlButton.onclick = function () {
           fetch(getAuthURL)
             .then(function (response) {
               return response.json();
