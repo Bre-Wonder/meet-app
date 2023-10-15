@@ -41,7 +41,7 @@ module.exports.getAccessToken = async (event) =>
   return new Promise((resolve, reject) => {
     oAuth2Client.getToken(code, (error, response) => {
       if (error) {
-        return reject(error);
+       return reject(error);
       }
       return resolve(response);
     });
