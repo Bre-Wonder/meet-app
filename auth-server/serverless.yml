@@ -12,7 +12,7 @@ provider:
 functions: 
   getAuthURL:
     handler: handler.getAuthURL
-    evetns: 
+    events: 
       - http:
           path: api/get-auth-url #<your api path>
           method: get #<get, post, put, or delete>
