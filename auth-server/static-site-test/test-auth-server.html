@@ -38,7 +38,7 @@
             .then(function (json) {
               const result = JSON.stringify(json);
               const { authUrl } = JSON.parse(result);
-              result.Element.innerText = result;
+              resultElement.innerText = result;
               resultLink.href = authUrl;
             });
         };
