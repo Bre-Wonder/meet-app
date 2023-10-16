@@ -37,9 +37,9 @@
             })
             .then(function (json) {
               const result = JSON.stringify(json);
+              console.log('take me to the error');
               const { authUrl } = JSON.parse(result);
               resultElement.innerText = result;
-              console.log('take me to the error');
               resultLink.href = authUrl;
             });
         };
