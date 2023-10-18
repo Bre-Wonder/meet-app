@@ -38,9 +38,9 @@
             .then(function (json) {
               const result = JSON.stringify(json);
               console.log('take me to the error');
-              const { authUrl } = JSON.parse(result);
+              const { authURL } = JSON.parse(result);
               resultElement.innerText = result;
-              resultLink.href = authUrl;
+              resultLink.href = authURL;
             });
         };
       </script>
