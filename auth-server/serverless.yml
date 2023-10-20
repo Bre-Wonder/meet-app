@@ -14,11 +14,17 @@ functions:
     handler: handler.getAuthURL
     events: 
       - http:
-          path: api/get-auth-url #<your api path>
-          method: get #<get, post, put, or delete>
+          path: api/get-auth-url #<my api path>
+          method: get #< calls for get, post, put, or delete>
   getAccessToken:
     handler: handler.getAccessToken
     events:
       - http:
           path: api/token/{code}
           method: get
+  getCalendarEvents:
+    handler: handler.getCalendarEvents
+    events:
+      - http:
+        path: api/get-events/{access_token}
+        method: get
