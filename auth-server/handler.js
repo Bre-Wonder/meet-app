@@ -81,11 +81,10 @@ module.exports.getCalendarEvents = async (event) => {
       (error, response) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(response);
         }
+        return resolve(response);
       }
-    )
+    );
   })
     .then((results) => {
       return {
