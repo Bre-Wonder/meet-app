@@ -85,8 +85,9 @@ module.exports.getCalendarEvents = async (event) => {
           resolve(response);
         }
       }
-    );
-    Promise.then((results) => {
+    )
+  })
+    .then((results) => {
       return {
         statusCode: 200,
         headers: {
@@ -107,5 +108,4 @@ module.exports.getCalendarEvents = async (event) => {
         }
       }
     });
-  });
 };
