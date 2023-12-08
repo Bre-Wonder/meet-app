@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { render, fireEvent } from "@testing-library/react"
 import Event from "../components/Event";
 import "../mock-data";
 import { getEvents } from "../api";
@@ -39,25 +39,41 @@ describe('<Event /> component', () => {
 
   });
 
-  // Testing that an event contains a "show details" button
-  test('when opened, event details should be hidden', () => {
-    expect(EventComponent.queryByText('show details')).toBeInTheDocument();
-    //rewrite this test
+  // Testing that an event by default the event details are hidden
+  test('when opened, event details should be hidden by default', () => {
+    expect(EventComponent.getByText('Show Details')).toBeInTheDocument();
+
+    expect(EventComponent.getByText('Hide Details')).not.toBeInTheDocument();
 
   });
 
-  test('details are shown about event when show details button is clicked', async () => {
-    expect(EventComponent.queryByText('show details')).toBeInTheDocument();
-    //rewrite this test
+  test('Show Details button displays when details are hidden', async () => {
+    const showDetailsButton = EventComponent.getByText('Show Details');
+    expect(showDetailsButton).toBeInTheDocument();
+
+    await fireEvent.click(showDetailsButton);
+
+    const hideDetailsButton = EventComponent.getByText('Hide Details');
+    expect(hideDetailsButton).toBeInTheDocument();
 
   });
 
-  test('details are hiddent when hide details button is clicked', async () => {
-    expect(EventComponent.queryByText('show details')).toBeInTheDocument();
-    //rewrite this test
+  test('Hide Details button displays when detials are shown', async () => {
+
+    const showDetailsButton = EventComponent.getByText('Show Details');
+
+    await fireEvent.click(showDetailsButton);
+
+    const hideDetailsButton = EventComponent.getByText('Hide Details');
+    expect(hideDetailsButton).toBeInTheDocument();
+
+    await fireEvent.click(hideDetailsButton);
+
+    const showDetailsButtonAfterHide = EventComponent.getByText('Show Details');
+    expect(showDetailsButtonAfterHide).toBeInTheDocument();
 
   });
 
 
 
-})
+});
