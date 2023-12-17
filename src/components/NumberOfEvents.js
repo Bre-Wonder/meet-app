@@ -15,6 +15,7 @@ const NumberOfEvents = () => {
         id="eventCountInput"
         value={inputValue}
         onChange={handleInputChange}
+        role="textbox"
       />
     </div>
 
