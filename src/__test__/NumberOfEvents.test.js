@@ -26,11 +26,11 @@ describe('<NumberOfEvents /> component', () => {
   //Ensure that the value fo the NumberOfEvents component's textbox has a value that changes accordingly when a user types in it
   test('Textbox changes accordingly to what user types in it', async () => {
     const textBoxElement = eventCount.getByRole('textbox');
-    const inputValue = ''; // need to figure out how to dymically define 'inputValue'
+    const inputValue = '10';
 
     await userEvent.type(textBoxElement, { target: { value: inputValue } });
 
-    expect(textBoxElement).toHaveValue('inputValue');
+    expect(textBoxElement).toHaveValue('10');
 
   });
 
