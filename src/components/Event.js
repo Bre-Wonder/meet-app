@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { render } from "@testing-library/react";
+import { useEffect, useState } from "react";
 import { getEvents } from "../api";
-import mockData from "../mock-data";
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
+  const [allEvents, setAllEvents] = useState([]);
+  
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        const events = await getEvents();
+        setAllEvents(events);
+      } catch (error) {
+        console.error("Error in fetching events", error);
+      }
+    }
+
+  fetchEvents();
+  }, []);
+  
   const startTime = event.created;
 
  return (
