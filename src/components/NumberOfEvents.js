@@ -1,10 +1,8 @@
-import { useState } from 'react';
-
-const NumberOfEvents = () => {
-  const [inputValue, setInputValue] = useState([]);
+const NumberOfEvents = ({ setCurrentNumber }) => {
 
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
+    const inputValue = e.target.value;
+    setCurrentNumber(inputValue);
   };
 
   return (
@@ -12,8 +10,8 @@ const NumberOfEvents = () => {
       <label htmlFor="eventCountInput"> Event Count: </label>
       <input
         type="text"
-        id="eventCountInput"
-        value={inputValue}
+        id="event-Count-Input"
+        value={32}
         onChange={handleInputChange}
         role="textbox"
       />
