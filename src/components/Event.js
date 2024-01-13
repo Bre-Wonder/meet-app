@@ -6,7 +6,7 @@ const Event = ({ event }) => {
   let starTime = event.created;
 
   return (
-    <div>
+    <li role="listitem">
       <div className="eventName">{event.summary}</div>
       <div className="eventStartTime">{starTime}</div>
       <div className="eventLocations">{event.location}</div>   
@@ -19,7 +19,7 @@ const Event = ({ event }) => {
       ) : (
         <button onClick={() => setShowDetails(true)}>Show Details</button>
       )}
-    </div>
+    </li>
  );
 };
 
