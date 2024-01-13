@@ -18,9 +18,9 @@ describe('<NumberOfEvents /> component', () => {
   });
 
   //Default value of the input field is 32
-  test('Default value of the input field is 32', () => {
+  test('Default value of the input field is 33', () => {
     const textBoxElement = eventCount.getByRole('textbox');
-    expect(textBoxElement).toHaveValue('32');
+    expect(textBoxElement).toHaveValue('33');
 
   });
 
