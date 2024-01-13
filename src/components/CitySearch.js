@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CitySearch = ({ allLocations }) => {
+const CitySearch = ({ allLocations }) => { //add a prop here?
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState("");
   const [suggesitons, setSuggestions] = useState([]);
@@ -10,6 +10,8 @@ const CitySearch = ({ allLocations }) => {
     const filteredLocations = allLocations ? allLocations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     }) : [];
+
+    // useEffectHere
   
     setQuery(value);
     setSuggestions(filteredLocations);
