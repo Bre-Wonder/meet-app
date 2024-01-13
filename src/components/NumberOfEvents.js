@@ -6,12 +6,11 @@ const NumberOfEvents = ({ setCurrentNumber }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="eventCountInput"> Event Count: </label>
+    <div id="event-Count-Input">
+      <label htmlFor="event-Count-Input"> Event Count: </label>
       <input
         type="text"
-        id="event-Count-Input"
-        value={32}
+        value={33}
         onChange={handleInputChange}
         role="textbox"
       />
