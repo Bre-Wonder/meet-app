@@ -1,7 +1,7 @@
 import App from '../App';
 import NumberOfEvents from '../components/NumberOfEvents';
-import { userEvent, render } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> component', () => {
 
@@ -27,9 +27,9 @@ describe('<NumberOfEvents /> component', () => {
   //Ensure that the value fo the NumberOfEvents component's textbox has a value that changes accordingly when a user types in it
   test('Textbox changes accordingly to what user types in it', async () => {
     const textBoxElement = eventCount.getByRole('textbox');
-    const inputValue = '10';
+    const inputValue = '{backspace}{backspace}10';
 
-    await userEvent.type(textBoxElement, { target: { value: inputValue } });
+    await userEvent.type(textBoxElement, inputValue);
 
     expect(textBoxElement).toHaveValue('10');
 
