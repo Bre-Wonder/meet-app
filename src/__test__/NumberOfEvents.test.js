@@ -1,13 +1,14 @@
+import App from '../App';
 import NumberOfEvents from '../components/NumberOfEvents';
 import { userEvent, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> component', () => {
 
   let eventCount
 
   beforeEach(() => {
-    eventCount = render(<NumberOfEvents />);
+    eventCount = render(<NumberOfEvents setCurrentNumber={() => {}}/>);
   });
 
   //NumberOfEvents component contains role of textbox
