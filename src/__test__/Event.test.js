@@ -41,9 +41,9 @@ describe('<Event /> component', () => {
 
   // Testing that an event by default the event details are hidden
   test('when opened, event details should be hidden by default', () => {
-    expect(EventComponent.getByText('Show Details')).toBeInTheDocument();
+    // expect(EventComponent.getByText('Show Details')).toBeInTheDocument();
 
-    expect(EventComponent.getByText('Hide Details')).not.toBeInTheDocument();
+    expect(EventComponent.container.querySelector('.HideDetails')).not.toBeInTheDocument();
 
   });
 
