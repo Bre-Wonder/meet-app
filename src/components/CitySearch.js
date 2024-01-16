@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const CitySearch = ({ allLocations }) => { //add a prop here?
+const CitySearch = ({ allLocations }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState("");
   const [suggesitons, setSuggestions] = useState([]);
@@ -11,7 +11,6 @@ const CitySearch = ({ allLocations }) => { //add a prop here?
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     }) : [];
 
-    // useEffectHere
   
     setQuery(value);
     setSuggestions(filteredLocations);
@@ -22,6 +21,11 @@ const CitySearch = ({ allLocations }) => { //add a prop here?
     setQuery(value);
     setShowSuggestions(false);
   };
+
+  useEffect(() => {
+    setSuggestions(allLocations);
+  }, [`${allLocations}`]);
+
 
   return (
     <div id="city-search">
