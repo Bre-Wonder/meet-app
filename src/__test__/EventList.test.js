@@ -30,7 +30,7 @@ describe('<EventList /> component', () => {
 describe('<EventList /> integration', () => {
 
   //test #4
-  test('renders a list of 32 evetns when the app is mounted and rendered', async () => {
+  test('renders a list of 32 events when the app is mounted and rendered', async () => {
     const AppComponent = render(<App />); 
     const AppDOM = AppComponent.container.firstChild;
     const EventListDOM = AppDOM.querySelector('#event-list');
