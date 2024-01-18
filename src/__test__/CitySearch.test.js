@@ -1,4 +1,4 @@
-import { render, within } from '@testing-library/react';
+import { render, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 // import { getCalendarEvents } from '../../auth-server/handler';
 import CitySearch from '../components/CitySearch';
@@ -32,6 +32,7 @@ describe('<CitySearch /> component', () => {
     const user = userEvent.setup();
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     await user.click(cityTextBox);
+
     const suggestionList = CitySearchComponent.queryByRole('list');
     expect(suggestionList).toBeInTheDocument();
     expect(suggestionList).toHaveClass('suggestions');
@@ -93,8 +94,15 @@ test('renders suggestions list when the app is rendered', async () => {
   const allEvents = await getEvents();
   const allLocations = extractLocations(allEvents);
 
-  const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
-  expect(suggestionListItems.length).toBe(allLocations.length + 1);
+  await waitFor(() => {
+    const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
+    expect(suggestionListItems.length).toBe(allLocations.length + 1);
+   });
+
+  // const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
+  // expect(suggestionListItems.length).toBe(allLocations.length + 1);
+
+
   });
 
 });
