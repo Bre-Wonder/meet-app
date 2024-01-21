@@ -1,18 +1,17 @@
 import App from '../App';
 import NumberOfEvents from '../components/NumberOfEvents';
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { toHaveDescription } from '@testing-library/jest-dom/dist/matchers';
-import { getEvents } from '../api';
 
 // unit testing
 
 describe('<NumberOfEvents /> component', () => {
 
-  let eventCount
+  let eventCount;
 
   beforeEach(() => {
-    eventCount = render(<NumberOfEvents setCurrentNumber={() => {}}/>);
+    eventCount = render(<NumberOfEvents setCurrentNOE={() => {}}/>);
   });
 
   //NumberOfEvents component contains role of textbox
@@ -61,7 +60,7 @@ describe('<NumberOfEvents /> integration', () => {
     const EventListDOM = AppDOM.querySelector('#event-list');
     const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
 
-    expect(allRenderedEventItems.length).toHaveValue('10');
+    expect(allRenderedEventItems.length).toBe('10');
 
   });
 
