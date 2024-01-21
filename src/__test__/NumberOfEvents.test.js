@@ -1,6 +1,6 @@
 import App from '../App';
 import NumberOfEvents from '../components/NumberOfEvents';
-import { render, within } from '@testing-library/react';
+import { render, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { toHaveDescription } from '@testing-library/jest-dom/dist/matchers';
 
@@ -56,6 +56,14 @@ describe('<NumberOfEvents /> integration', () => {
     // await user.click(noeTextBox); // not sure if I need this yet
 
     await user.type(noeTextBox, '{backspace}{backspace}10');
+
+    // await waitFor(() => {
+    //   const EventListDOM = AppDOM.querySelector('#event-list');
+    //   const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
+  
+    //   expect(allRenderedEventItems.length).toBe(10);
+
+    // });
 
     const EventListDOM = AppDOM.querySelector('#event-list');
     const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
