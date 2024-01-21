@@ -31,7 +31,8 @@ const App = () => {
     <div className="App">
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents /> 
-      <EventList events={events} />   
+      <EventList events={events} />  
+      {/* // add setCurrentNOE to this component */}
     </div>
   );
 }
