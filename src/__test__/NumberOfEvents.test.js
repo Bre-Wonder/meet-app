@@ -34,7 +34,7 @@ describe('<NumberOfEvents /> component', () => {
 
     await userEvent.type(textBoxElement, inputValue);
 
-    expect(textBoxElement).toHaveValue('10');
+    expect(textBoxElement).toBe(10);
 
   });
 
