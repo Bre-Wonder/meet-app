@@ -44,6 +44,10 @@ input[type="number"] {
 .suggestions {
   width: 250px;
   position: absolute;
+  display:inline-block;
+  border: 1px solid #000;
+  padding: 20px;
+
   top: 45px;
   z-index: 2;
   align-self: center;
@@ -55,7 +59,7 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  background-color: rgb(18, 17, 17);
   cursor: default;
 }
 
