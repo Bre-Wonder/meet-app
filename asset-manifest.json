@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/Bre-Wonder/meet-app.git/static/css/main.073c9b0a.css",
-    "main.js": "/Bre-Wonder/meet-app.git/static/js/main.f2117d3b.js",
+    "main.css": "/Bre-Wonder/meet-app.git/static/css/main.93ee5138.css",
+    "main.js": "/Bre-Wonder/meet-app.git/static/js/main.24670e4d.js",
     "static/js/787.4b564826.chunk.js": "/Bre-Wonder/meet-app.git/static/js/787.4b564826.chunk.js",
-    "static/media/logo.svg": "/Bre-Wonder/meet-app.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Bre-Wonder/meet-app.git/index.html",
-    "main.073c9b0a.css.map": "/Bre-Wonder/meet-app.git/static/css/main.073c9b0a.css.map",
-    "main.f2117d3b.js.map": "/Bre-Wonder/meet-app.git/static/js/main.f2117d3b.js.map",
+    "main.93ee5138.css.map": "/Bre-Wonder/meet-app.git/static/css/main.93ee5138.css.map",
+    "main.24670e4d.js.map": "/Bre-Wonder/meet-app.git/static/js/main.24670e4d.js.map",
     "787.4b564826.chunk.js.map": "/Bre-Wonder/meet-app.git/static/js/787.4b564826.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f2117d3b.js"
+    "static/css/main.93ee5138.css",
+    "static/js/main.24670e4d.js"
   ]
 }
