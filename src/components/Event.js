@@ -6,18 +6,18 @@ const Event = ({ event }) => {
   let starTime = event.created;
 
   return (
-    <li role="listitem">
+    <li role="listitem" className="event">
       <div className="eventName">{event.summary}</div>
       <div className="eventStartTime">{starTime}</div>
       <div className="eventLocations">{event.location}</div>   
 
       {showDetails ? (
         <div>
-          <p>Event Details</p>
+          <p className="details-btn">Event Details</p>
           <button className="HideDetails" onClick={() => setShowDetails(false)}>Hide Details</button>
         </div>
       ) : (
-        <button onClick={() => setShowDetails(true)}>Show Details</button>
+        <button className="details-btn" onClick={() => setShowDetails(true)}>Show Details</button>
       )}
     </li>
  );
