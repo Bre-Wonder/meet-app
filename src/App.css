@@ -44,11 +44,6 @@ input[type="number"] {
 .suggestions {
   width: 250px;
   position: absolute;
-  
-  /*display:inline-block;
-  border: 1px solid #000;
-  padding: 20px;*/
-
   top: 45px;
   z-index: 2;
   align-self: center;
