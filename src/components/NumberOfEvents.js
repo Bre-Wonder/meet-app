@@ -10,6 +10,8 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
       <label htmlFor="event-Count-Input"> Event Count: </label>
       <input
         type="text"
+        id="number-of-events-input"
+        className="number-of-events-input"
         defaultValue={33}
         onChange={handleInputChange}
         role="textbox"
