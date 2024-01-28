@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "public/index.html",
   "private": true,
-  "homepage": "https://bre-wonder.github.io/meet-app",
+  "homepage": "https://bre-wonder.github.io/meet-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
