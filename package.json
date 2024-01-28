@@ -1,7 +1,7 @@
 {
   "name": "meet",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "public/index.html",
   "private": true,
   "homepage": "https://bre-wonder.github.io/meet-app",
   "dependencies": {
