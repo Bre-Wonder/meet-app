@@ -20,7 +20,7 @@ describe('<NumberOfEvents /> component', () => {
     expect(textBoxElement).toBeInTheDocument();
   });
 
-  //Default value of the input field is 32
+  //Default value of the input field is 33
   test('Default value of the input field is 33', () => {
     const textBoxElement = eventCount.getByRole('textbox');
     expect(textBoxElement).toHaveValue('33');
