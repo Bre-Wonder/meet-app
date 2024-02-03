@@ -71,15 +71,20 @@ defineFeature(feature, test => {
 
     });
 
+    let suggestionListItems;
     and('the list of suggested cities renders', () => {
-
+      suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
+      expect(suggestionListItems).toHaveLength(2);
     });
 
-    when('the user selects a name of a city', () => {
+    when('the user selects a name of a city', async () => {
+      const user = userEvent.setup();
+      await user.click(suggestionListItems[0]);
 
     });
 
     then('the city will change to the selected city name', () => {
+      expect(citySearchInput.value).toBe('Berlin, Germany');
 
     });
 
