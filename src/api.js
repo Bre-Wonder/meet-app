@@ -86,10 +86,10 @@ export const getAccessToken = async () => {
         "https://4de84okria.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url"
       );
       const result = await response.json();
-      const { authUrl } = result;
-      return (window.location.href = authUrl);
+      const { authURL } = result;
+      return (window.location.href = authURL);
     }
-    return code && getAccessToken(code);
+    return code && getToken(code);
   }
   return accessToken;
 };
