@@ -17,5 +17,5 @@ Feature: Filter Events By City
     And the list of suggested cities renders
     When the user selects a name of a city
     Then the city will change to the selected city name
-    And user will only see a list of events in that cityå
+    And user will only see a list of events in that city
 
