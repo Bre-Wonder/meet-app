@@ -88,7 +88,14 @@ defineFeature(feature, test => {
 
     });
 
-    and('user will only see a list of events in that cityå', () => {
+    and('user will only see a list of events in that city', async () => {
+      const EventListDOM = AppDOM.querySelector('#event-list');
+      const EventListItems = within(EventListDOM).queryAllByRole('listitem');
+      const allEvents = await getEvents();
+
+      //the list of events being trimmed down to those listed in Berlin, Germany
+      const berlinEvents = allEvents.filter(event => event.location === citySearchInput.value)
+      expect(EventListItems).toHaveLength(berlinEvents.length);
 
     });
   });
