@@ -23,7 +23,9 @@ const checkToken = async (accessToken) => {
 // Will fetch the list of all events from Google Calendar API
 
 export const getEvents = async () => {
+  //NProgress.start();
   if (window.location.href.startsWith('http://localhost')) {
+    //NProgress.done();
     return mockData;
   }
   
