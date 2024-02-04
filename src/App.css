@@ -8,10 +8,17 @@
   box-sizing: border-box;
 }
 
+.eventName {
+  font-size: larger;
+  font-weight: bold;
+}
+
 ul {
   padding: 0;
   list-style: none;
 }
+
+
 
 p {
   margin: 5px 0;
