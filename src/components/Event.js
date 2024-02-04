@@ -13,11 +13,11 @@ const Event = ({ event }) => {
 
       {showDetails ? (
         <div>
-          <p>Event Details</p>
-          <button className="details-btn" onClick={() => setShowDetails(false)}>Hide Details</button>
+          <p className="detail-description">{event.description}</p>
+          <button className="details-btn" id="hide-details" onClick={() => setShowDetails(false)}>Hide Details</button>
         </div>
       ) : (
-        <button className="details-btn" onClick={() => setShowDetails(true)}>Show Details</button>
+        <button className="details-btn" id="show-details" onClick={() => setShowDetails(true)}>Show Details</button>
       )}
     </li>
  );
