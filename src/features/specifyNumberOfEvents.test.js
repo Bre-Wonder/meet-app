@@ -1,7 +1,6 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
-import { render, screen, within } from "@testing-library/react";
+import { render, within, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import EventList from "../components/EventList";
 import App from "../App";
 
 const feature = loadFeature('./src/features/specifyNumberOfEvents.feature');
@@ -21,13 +20,13 @@ defineFeature(feature, test => {
 
     	});
 
-    	then('33 events will be displayed by default;', () => {
+    	then('33 events will be displayed by default;', async () => {
         const AppDOM = AppComponent.container.firstChild;
         const EventListDOM = AppDOM.querySelector('#event-list');
-        const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
-
-        expect(allRenderedEventItems.length).toBe(33);
-
+        await waitFor(() => {
+          const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
+          expect(allRenderedEventItems.length).toBe(33);
+        });
     	});
     });
 
@@ -59,23 +58,3 @@ defineFeature(feature, test => {
     });
 
 });
-
-// test('update the number of events with what the user types a new number', async () => {
-//   const user = userEvent.setup();
-//   const AppComponent = render(<App />);
-//   const AppDOM = AppComponent.container.firstChild;
-
-//   const noeDOM = AppDOM.querySelector('#event-Count-Input'); 
-//   const noeTextBox = within(noeDOM).queryByRole('textbox');
-//   // await user.click(noeTextBox); // not sure if I need this yet
-
-//   await user.type(noeTextBox, '{backspace}{backspace}10');
-
-//   const EventListDOM = AppDOM.querySelector('#event-list');
-//   const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
-
-//   expect(allRenderedEventItems.length).toBe(10);
-
-// });
-
-// });
