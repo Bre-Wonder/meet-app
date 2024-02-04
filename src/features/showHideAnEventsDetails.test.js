@@ -28,8 +28,8 @@ defineFeature(feature, test => {
 
     then('an events details should be hidden by default', () => {
       const AppDOM = AppComponent.container.firstChild;
-      const EventDOM = AppDOM.querySelector('#event');
-      expect(EventDOM.container.querySelector('.HideDetails')).not.toBeInTheDocument();
+      const details = AppDOM.querySelector('.detail-description');
+      expect(details).not.toBeInTheDocument();
 
 
     });
