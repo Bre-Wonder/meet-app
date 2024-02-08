@@ -1,7 +1,8 @@
-import { render, waitFor, within } from "@testing-library/react";
+import { render, waitFor, within, fireEvent } from "@testing-library/react";
 import { loadFeature, defineFeature } from "jest-cucumber";
 import App from "../App";
 import Event from "../components/Event";
+import { getEvents } from "../api";
 
 
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
@@ -37,16 +38,30 @@ defineFeature(feature, test => {
 
   test('User can expand an event to see details', ({ given, when, then }) => {
 
-    given('there is an event with no details being shown to the user', () => {
+  let AppComponent;
+    given('there is an event with no details being shown to the user',  () => {
+      AppComponent = render(<App />);
+      const AppDOM = AppComponent.container.firstChild;
+      const details = AppDOM.querySelector('.detail-description');
+      expect(details).not.toBeInTheDocument();   
 
     });
 
-    when('the user clicks the show details button', () => {
+    let allEvents;
+    let EventComponent;    
+    when('the user clicks the show details button', async () => {
+      allEvents = await getEvents();
+      EventComponent = render(<Event event={allEvents[0]} />);
+      const showDetailsButton = EventComponent.getByText('Show Details');
+      expect(showDetailsButton).toBeInTheDocument();
+  
+      await fireEvent.click(showDetailsButton);
 
     });
 
     then('the details of the event should be shown to user', () => {
-
+      const hideDetailsButton = EventComponent.getByText('Hide Details');
+      expect(hideDetailsButton).toBeInTheDocument();
     });
   });
 
