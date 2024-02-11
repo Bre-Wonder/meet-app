@@ -1,8 +1,16 @@
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
+    
+    let errorText;
+    if (inputValue === null || inputValue <= 0 || isNaN(inputValue)) {
+      errorText = "Only positive nubmers are allowed"
+    } else {
+      errorText = ""
+    }
     setCurrentNOE(inputValue);
+    setErrorAlert(errorText);
   };
 
   return (
