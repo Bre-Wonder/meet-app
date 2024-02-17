@@ -4,7 +4,7 @@ import NumberOfEvents from './components/NumberOfEvents';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
-import CityEventChart from './components/CityEventsChart';
+import CityEventsChart from './components/CityEventsChart';
 
 import './App.css';
 
