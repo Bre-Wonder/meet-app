@@ -108,11 +108,13 @@ input[type="number"] {
 }
 
 .charts-container {
+  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 @media screen and (max-width: 768px) {
   .charts-container{
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
