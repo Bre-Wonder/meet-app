@@ -25,6 +25,7 @@ const App = () => {
       setWarningAlert("Please be aware, your application is now offline. Listed events may not be up to date.")
     }
     fetchData();
+    // eslint-disable-next-line
   }, [currentCity, currentNOE]);
 
   const fetchData = async () => {
