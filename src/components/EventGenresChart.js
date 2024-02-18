@@ -27,11 +27,14 @@ const EventGenresChart = ({ events }) => {
     const radius = outerRadius;
     const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
     const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+
+    const fillColor = colors[index % colors.length]; // added this line
+
     return percent ? (
       <text
         x={x}
         y={y}
-        fill="#8884d8"
+        fill={fillColor} //changed this line
         textAnchor={x > cx ? 'start' : 'end'}
         dominantBaseline="central"
       >
