@@ -24,24 +24,27 @@ const App = () => {
     } else {
       setWarningAlert("Please be aware, your application is now offline. Listed events may not be up to date.")
     }
-    fetchData();
-    // eslint-disable-next-line
-  }, [currentCity, currentNOE]);
 
-  const fetchData = async () => {
-    const allEvents = await getEvents();
-    let filteredEvents = currentCity === "See all cities" ?
-      allEvents :
-      allEvents.filter(event => event.location === currentCity)
-
-    if(currentNOE && currentNOE < filteredEvents.length) {
-      filteredEvents = filteredEvents.slice(0, currentNOE)
+    const fetchData = async () => {
+      const allEvents = await getEvents();
+      let filteredEvents = currentCity === "See all cities" ?
+        allEvents :
+        allEvents.filter(event => event.location === currentCity)
+  
+      if(currentNOE && currentNOE < filteredEvents.length) {
+        filteredEvents = filteredEvents.slice(0, currentNOE)
+      }
+  
+  
+      setEvents(filteredEvents.slice(0, currentNOE));
+      setAllLocations(extractLocations(allEvents));
     }
 
 
-    setEvents(filteredEvents.slice(0, currentNOE));
-    setAllLocations(extractLocations(allEvents));
-  }
+    fetchData();
+  }, [currentCity, currentNOE]);
+
+ 
 
 
 
