@@ -1,14 +1,21 @@
-# meet-app
+# Meet-App
 
 ### Project Description
 
   The Meet App is a serverless, progressive web application built in React using test-driven development. The user should be able to open the application whether online or offline to select a city to see a list of events for that location. Each city should allow the user to select event details, filter the number of events they want to view, and see a vizualization of the details of all the events going on in that city. 
 
 ### Technologies Used: 
-React Native | D3 |
+React 18.2.0  | D3 | AWS Lambda | gh-pages 6.0.0
 
 
-### How to start up this project?
+### How to start up this project:
+
+  Using Serverless Functions with Meet App:
+  This Meet App uses AWS Lambda cloud services to run its serverless function. The serverless function allows the application to scale up or down depending on the traffic. The server only responds when an event is triggered by the user, in this case when a user selects a city or wants to see details or lists of events. AWS Lambda handles the allocation of resources such as compute and memory as its excuting the serverless function in response to its needs.
+
+  The app was built with `create-react-app` in React in the CLI. 
+  
+  The app is hosted through "gh-pages" in GitHub. 
 
 
 ### API Used:
@@ -32,21 +39,12 @@ Live Site:
 
 
 
-# How to get the project started
+#### How to get the project started
 
   The app was built through the "create-react-app" in React in the CLI. The app is hosted through "gh-pages" in GitHub. 
 
-  ## Using Serverless Functions with Meet App
-    This Meet App uses AWS Lambda cloud services to run its serverless function. The serverless function allows the application to scale up or down depending on the traffic. The server only responds when an event is triggered by the user, in this case when a user selects a city or wants to see details or lists of events. AWS Lambda handles the allocation of resources such as compute and memory as its excuting the serverless function in response to its needs.
 
-# List of Project Dependancies
-  
-  * React 18.2.0
-  * API used: Google Calendar API
-  * gh-pages 6.0.0
-
-
-# User Stories
+### User Stories
 
   Format for User Stories:
   As a [role],
@@ -57,7 +55,7 @@ Live Site:
   When: ***
   Then: ***
 
-## Feature 1: Filter Events By City
+Feature 1 - Filter Events By City:
   As a user,
   I should be able to filter events by city
   So that I can see a list of events taking place in that city
@@ -111,9 +109,7 @@ Live Site:
   When: the user types in a city name
   Then: a chart visualizes all the events going on in that city
 
-  # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -152,33 +148,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Further Help
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
