@@ -13,6 +13,9 @@ React 18.2.0  | D3 | AWS Lambda | gh-pages 6.0.0
   Using Serverless Functions with Meet App:
   This Meet App uses AWS Lambda cloud services to run its serverless function. The serverless function allows the application to scale up or down depending on the traffic. The server only responds when an event is triggered by the user, in this case when a user selects a city or wants to see details or lists of events. AWS Lambda handles the allocation of resources such as compute and memory as its excuting the serverless function in response to its needs.
 
+  Setting up Google Cloud Project (used for the Google Calendar API):
+  You can look up Google API console in a search engine. This will send you to the link to login and then select a project. When you press "select a project" there should be an option at the top right that allows you to click "new project".
+
   The app was built with `create-react-app` in React in the CLI. 
   
   The app is hosted through "gh-pages" in GitHub. 
@@ -24,24 +27,13 @@ Google Calendar API
 
 ### Learning Moments: 
 
-
-### What would I do differently? 
-
-
-### What was the biggest learning take aways? 
+I really enjoyed this project. I had been wanting to do a little bit of work with D3 because I think putting data in graphical respresentation allows data be more accessible to users. The data also adjusts as the searches bar changes which causes the data to display differently in real time. 
 
 
 GitHub Repository site: https://github.com/Bre-Wonder/meet-app
 
-Live Site: 
+Live Site: https://bre-wonder.github.io/meet-app/
 
-
-
-
-
-#### How to get the project started
-
-  The app was built through the "create-react-app" in React in the CLI. The app is hosted through "gh-pages" in GitHub. 
 
 
 ### User Stories
@@ -109,44 +101,6 @@ Feature 1 - Filter Events By City:
   When: the user types in a city name
   Then: a chart visualizes all the events going on in that city
 
-
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Further Help
 
