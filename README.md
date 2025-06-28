@@ -29,6 +29,9 @@ Google Calendar API
 
 I really enjoyed this project. I had been wanting to do a little bit of work with D3 because I think putting data in graphical respresentation allows data be more accessible to users. The data also adjusts as the searches bar changes which causes the data to display differently in real time. 
 
+### What would I do differently?
+I would change two things about this applications. The load time is slower than it should be, maybe due to the amount of data objects that are being loaded from the API. A second change I would make is on some of the events listed the description if hidden by the "hide details" button. I would find a way to get get the text to wrap before covering it up. 
+
 
 GitHub Repository site: https://github.com/Bre-Wonder/meet-app
 
